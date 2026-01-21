@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- 
+Declara el tipo de documento como HTML5.
+Es obligatorio y permite que el navegador interprete correctamente el código.
+-->
+
+<html lang="es">
+<!-- 
+Etiqueta raíz del documento HTML.
+lang="es" indica que el contenido está en español.
+Ayuda a accesibilidad, SEO y lectores de pantalla.
+-->
+
+<head>
+    <!-- 
+    La etiqueta <head> contiene información que NO se muestra en pantalla:
+    metadatos, enlaces a estilos, scripts, etc.
+    -->
+
+    <meta charset="UTF-8">
+    <!-- 
+    Define la codificación de caracteres.
+    UTF-8 permite usar acentos, símbolos y caracteres especiales.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    Hace que la web sea responsive.
+    Permite que se vea correctamente en móviles y tablets.
+    -->
+
+    <title>SERVITIC - Servicios Tecnológicos y Mantenimiento Informático</title>
+    <!-- 
+    Título que aparece en la pestaña del navegador.
+    También es importante para SEO.
+    -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- 
+    Enlaza un archivo CSS externo.
+    Aquí se definen los estilos visuales de la página.
+
+    BUENA PRÁCTICA:
+    Separar HTML (estructura) y CSS (estilos).
+
+    EJERCICIO:
+    Crear un segundo archivo CSS solo para móviles (responsive).
+    -->
+</head>
+
+<body>
+    <!-- 
+    La etiqueta <body> contiene TODO lo que el usuario ve en pantalla.
+    -->
+
+    <!-- =========================
+         HEADER / CABECERA
+    ========================== -->
+    <header>
+        <!-- 
+        <header> representa la cabecera de la página.
+        Normalmente contiene el logo y el menú de navegación.
+        -->
+
+        <div class="container">
+            <!-- 
+            Contenedor genérico para limitar el ancho del contenido.
+            Facilita el diseño y la alineación.
+            -->
+
+            <div class="header-content">
+                <!-- 
+                Agrupa logo y menú.
+                Permite usar flexbox o grid en CSS.
+                -->
+
+                <div class="logo">SERVITIC</div>
+                <!-- 
+                Logo de la empresa.
+                Podría sustituirse por una imagen <img>.
+                
+                EJERCICIO:
+                Reemplazar este texto por un logo en formato SVG.
+                -->
+
+                <nav>
+                    <!-- 
+                    <nav> indica una zona de navegación.
+                    Es semántico y mejora accesibilidad.
+                    -->
+
+                    <ul>
+                        <!-- 
+                        Lista no ordenada para el menú.
+                        -->
+
+                        <li><a href="#servicios">Servicios</a></li>
+                        <!-- 
+                        Enlace interno.
+                        href="#servicios" apunta a la sección con id="servicios".
+                        -->
+
+                        <li><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+         HERO / SECCIÓN PRINCIPAL
+    ========================== -->
+    <section class="hero">
+        <!-- 
+        Sección destacada inicial.
+        Se usa para presentar el mensaje principal del sitio.
+        -->
+
+        <div class="container">
+            <h1>Soluciones Tecnológicas Profesionales</h1>
+            <!-- 
+            h1 es el título principal de la página.
+            Solo debería existir un h1 por página.
+            -->
+
+            <p>Tu partner de confianza en servicios informáticos y mantenimiento tecnológico</p>
+            <!-- 
+            Texto descriptivo o slogan.
+            -->
+        </div>
+    </section>
+
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+    <section id="servicios">
+        <!-- 
+        Sección con id para permitir navegación interna.
+        -->
+
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <!-- 
+            h2 indica un título de segundo nivel.
+            -->
+
+            <div class="servicios-grid">
+                <!-- 
+                Contenedor para tarjetas de servicios.
+                Ideal para usar CSS Grid o Flexbox.
+                -->
+
+                <!-- TARJETA DE SERVICIO -->
+                <div class="servicio-card">
+                    <h3>Mantenimiento Informático</h3>
+                    <p>
+                        Mantenimiento preventivo y correctivo de equipos.
+                    </p>
+                </div>
+
+                <!-- 
+                Cada servicio se representa como una tarjeta.
+                EJERCICIO:
+                Generar estas tarjetas dinámicamente con JavaScript.
+                -->
+
+                <div class="servicio-card">
+                    <h3>Soporte Técnico</h3>
+                    <p>Asistencia técnica personalizada 24/7.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Consultoría IT</h3>
+                    <p>Asesoramiento profesional a medida.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Redes y Comunicaciones</h3>
+                    <p>Diseño e instalación de redes empresariales.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Seguridad Informática</h3>
+                    <p>Protección de sistemas y datos.</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Servicios en la nube seguros y escalables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         QUIÉNES SOMOS
+    ========================== -->
+    <section id="quienes-somos">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+
+            <div class="about-content">
+                <!-- 
+                Texto descriptivo de la empresa.
+                -->
+
+                <p>
+                    SERVITIC es una empresa especializada en servicios tecnológicos
+                    con más de 15 años de experiencia.
+                </p>
+
+                <p>
+                    Nos caracterizamos por nuestra cercanía con el cliente
+                    y trato personalizado.
+                </p>
+
+                <p>
+                    La tecnología debe ser un aliado estratégico para tu negocio.
+                </p>
+
+                <!-- 
+                EJERCICIO:
+                Convertir esta sección en un acordeón interactivo.
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+
+            <div class="contacto-container">
+                <!-- 
+                Contenedor del formulario.
+                -->
+
+                <form id="contactForm">
+                    <!-- 
+                    <form> permite recoger datos del usuario.
+                    -->
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" required>
+                        <!-- 
+                        required obliga a rellenar el campo.
+                        -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required>
+                        <!-- 
+                        type="email" valida el formato automáticamente.
+                        -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <input type="text" id="asunto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Enviar Mensaje
+                    </button>
+
+                    <!-- 
+                    EJERCICIO:
+                    Validar el formulario con JavaScript antes de enviarlo.
+                    -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h3>SERVITIC</h3>
+                    <p>Soluciones tecnológicas profesionales</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@servitic.es</p>
+                    <p>Teléfono: +34 900 123 456</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Política de Cookies</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SERVITIC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script>
+        /*
+        SMOOTH SCROLL
+        Hace que el desplazamiento sea suave al hacer clic en enlaces internos
+        */
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Evita el salto brusco
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /*
+        ENVÍO DEL FORMULARIO
+        */
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita recargar la página
+
+            alert('¡Gracias por tu mensaje!');
+
+            this.reset(); // Limpia el formulario
+        });
+
+        /*
+        EJERCICIOS JAVASCRIPT:
+        1️⃣ Enviar el formulario a un servidor
+        2️⃣ Mostrar mensajes de error personalizados
+        3️⃣ Validar longitud mínima del mensaje
+        4️⃣ Mostrar confirmación dentro de la página
+        */
+    </script>
+</body>
+</html>
